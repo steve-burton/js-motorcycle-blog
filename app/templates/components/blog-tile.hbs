@@ -1,10 +1,9 @@
 {{yield}}
 <div class="blog-entry">
-  {{#link-to 'blog' blog.id}}<h3>{{blog.title}}</h3>{{/link-to}}
+  <h3>{{blog.title}}</h3>
   <p class="author">By {{blog.author}}</p>
   <img src={{blog.image}}/>
   <p class="credit">{{blog.credit}}</p>
   <p class="body">{{blog.body}}</p><br>
-  {{update-blog blog=blog update="update"}}
-  <button class="btn">Update blog</button>
+  {{#link-to 'blog' blog.id}}<button class="btn">Update blog</button>{{/link-to}}
 </div>
