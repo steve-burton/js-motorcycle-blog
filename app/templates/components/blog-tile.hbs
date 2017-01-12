@@ -5,5 +5,6 @@
   <img src={{blog.image}}/>
   <p class="credit">{{blog.credit}}</p>
   <p class="body">{{blog.body}}</p><br>
+  {{update-blog blog=blog update="update"}}
   <button class="btn" {{action 'delete' blog}}>Delete blog</button>
 </div>

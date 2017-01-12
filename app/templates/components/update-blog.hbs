@@ -1,0 +1,36 @@
+{{yield}}
+{{#if updateBlogForm}}
+  <h3>Update {{blog.title}}</h3>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="author">Author name</label>
+        {{input value=author id="author" placeholder=blog.author class="form-control"}}
+      </div>
+
+      <div class="form-group">
+        <label for="title">Headline</label>
+        {{input value=title id="title" placeholder=blog.title class="form-control"}}
+      </div>
+
+      <div class="form-group">
+        <label for="body">Body text</label>
+        {{input value=body id="body" placeholder=blog.body class="form-control"}}
+      </div>
+
+      <div class="form-group">
+        <label for="image">Image URL</label>
+        {{input value=image id="image" placeholder=blog.image class="form-control"}}
+      </div>
+
+      <div class="form-group">
+        <label for="credit">Photo credit</label>
+        {{input value=credit id="credit" placeholder=blog.credit class="form-control"}}
+      </div>
+      <button  class="btn"{{action 'update' blog}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button  class="btn"{{action 'updateBlogForm'}}>Update</button>
+{{/if}}
+<div class="btn"> {{#link-to 'index'}}Return home{{/link-to}}</div>
