@@ -1,6 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  model(params) {
+    return this.store.findRecord('blog', params.blog_id);
+  },
+
   actions: {
     saveBlog(params) {
       var newBlog = this.store.createRecord('blog', params);
@@ -15,6 +19,10 @@ export default Ember.Route.extend({
       });
       blog.save();
       this.transitionTo('index');
+    },
+    destroyBlog(blog) {
+      blog.destroyRecord();
+      this.transitionTo('index');
     }
-  },
+  }
 });

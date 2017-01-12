@@ -1,2 +1,4 @@
 {{outlet}}
-{{new-blog saveBlog='saveBlog'}}
+<h2>View {{model.title}}</h2>
+{{update-blog blog=model update="update"}}
+{{blog-detail blog=model destroyBlog="destroyBlog"}}
