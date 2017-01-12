@@ -2,7 +2,7 @@
 <div>
   <div class="blog-list">
     {{#each model as |blog|}}
-      {{blog-tile blog=blog}}
+      {{blog-tile blog=blog destroyBlog="destroyBlog"}}
     {{/each}}
   </div>
 </div>
