@@ -12,7 +12,7 @@ export default Ember.Component.extend({
         title: this.get('title'),
         body: this.get('body'),
         image: this.get('image'),
-        credit: this.get('credit'),
+        credit: this.get('credit')
       };
       this.set('updateBlogForm', false);
       this.sendAction('update', blog, params);
